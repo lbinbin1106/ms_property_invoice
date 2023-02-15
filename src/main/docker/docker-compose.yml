@@ -10,7 +10,7 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - db:/var/lib/postgresql/data
+      - ./create-table.sql:/docker-entrypoint-initdb.d/create-table.sql
 volumes:
   db:
     driver: local
